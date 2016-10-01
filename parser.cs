@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 
+namespace BRAB.GEO
+{
 
 public class Point
 {
@@ -72,4 +74,6 @@ public static class parser
 
 	parse(args[0]);
     }
+}
+
 }
