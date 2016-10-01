@@ -9,7 +9,12 @@ file_info : 'FileInfo' STRING? ',' STRING? ;
 
 point_list : 'PointList' ('begin' point* 'end')? ;
 
-point : 'Point' STRING ',' NUMBER ',' NUMBER ',' NUMBER ',' ',' ',';
+point : 'Point' name ',' north ',' east ',' height ',' ',' ',';
+
+name : STRING ;
+north : NUMBER ;
+east : NUMBER ;
+height : NUMBER ;
 
 line_list : 'LineList' ;
 attribute_list : 'AttributeList' ;
