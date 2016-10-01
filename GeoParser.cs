@@ -48,9 +48,9 @@ class PointsVisitor : GeoBaseVisitor<String>
     }
 }
 
-public static class parser
+public static class GeoFileParser
 {
-    static List<Point> parse(string filepath)
+    public static List<Point> Parse(string filepath)
     {
         var stream = new AntlrFileStream(filepath);
 
@@ -62,17 +62,6 @@ public static class parser
         visitor.Visit(tree);
 
         return visitor.points;
-    }
-
-    public static void Main(string[] args)
-    {
-        if (args.Length < 1)
-        {
-            Console.WriteLine("no input file specified");
-            return;
-        }
-
-	parse(args[0]);
     }
 }
 
